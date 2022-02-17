@@ -16,25 +16,26 @@ const Login = () => {
   };
  
 
-  return (
+  return (<>
     <div className="login">
-      <h1 className="loginTitle">Choose a social to login/register</h1>
+      <h1 className="loginTitle bella">Choose a social to login/register</h1>
+      </div>
     <div className="card ">
-          <div className="github btn btn-reverse btn-block " onClick={github}>
+          <div className="github btn  btn-block " onClick={github}>
             <FaGithub className="theRza gitty"/>
             Github
           </div>
-          <div className="github btn btn-block " onClick={google}>
+          <div className="github btn btn-reverse btn-block " onClick={google}>
             <FaGoogle className="theRza"/>
             Google
           </div>
-          <div className="github btn btn-reverse btn-block " onClick={spotify}>
+          <div className="github btn btn-block " onClick={spotify}>
             <FaSpotify className="theRza"/>
             Spotify
           </div>
           
           </div>
-        </div>
+          </>
       
  
   );

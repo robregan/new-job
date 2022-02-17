@@ -5,6 +5,7 @@ const SpotifyStrategy = require("passport-spotify").Strategy;
 const passport = require("passport");
 
 
+
 passport.serializeUser((user, done) => {
   done(null, user);
 });
