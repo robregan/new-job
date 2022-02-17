@@ -6,6 +6,8 @@ const passportSetup = require("./passport"); // this is needed to setup the stra
 const authRoute = require("./routes/auth");
 const app = express();
 const PORT = process.env.PORT || 5000
+const connectDB = require("./config/db")
+require('dotenv').config()
 
 
 
@@ -25,6 +27,8 @@ app.use(
   })
 );
 
+
+connectDB()
 app.use("/auth", authRoute);
 
 
