@@ -67,11 +67,11 @@ const Newhit = () => (
             type="button"
             onClick={handleReset}
             disabled={!dirty || isSubmitting}
-            className="btn btn-reverse btn-block"
+            className="btn btn-reverse btn-block bambi"
           >
             Reset
           </button>
-          <button className="btn btn-block"type="submit" disabled={isSubmitting}>
+          <button className="btn btn-block bambi"type="submit" disabled={isSubmitting}>
             Submit
           </button>
         </Form>

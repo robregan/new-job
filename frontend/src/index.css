@@ -272,6 +272,10 @@ input{
 .bella{
   color: rgb(104, 88, 88);
 }
+.btn.bambi{
+  width: 30%;
+  height: 35px;
+}
 @media screen and (max-width: 992px) {
   .card {
     width: 100%;
