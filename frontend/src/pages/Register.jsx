@@ -2,7 +2,7 @@ import {FaGoogle} from 'react-icons/fa'
 import {FaGithub} from "react-icons/fa";
 import {FaSpotify} from "react-icons/fa"
 
-const Login = () => {
+const Register = () => {
  
 
   const github = () => {
@@ -18,7 +18,7 @@ const Login = () => {
 
   return (<>
     <div className="login">
-      <h1 className="loginTitle bella">Choose a social to login</h1>
+      <h1 className="loginTitle bella">Choose a social to Register</h1>
       </div>
     <div className="card ">
           <div className="github btn  btn-block " onClick={github}>
@@ -41,4 +41,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

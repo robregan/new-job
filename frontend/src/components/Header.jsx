@@ -25,10 +25,14 @@ const Header = ({ user }) => {
             Logout
           </li>
         </ul>
-      ) : (
+      ) : (<>
         <Link className="link" to="login">
           Login
         </Link>
+         <Link className="link" to="register">
+         Register
+       </Link>
+       </>
       )}
     </div>
   );

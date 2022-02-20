@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Newhit from './pages/Newhit'
+import Register from './pages/Register'
 import Hits from './pages/Hits'
 import Login from './pages/Login'
 import {useState, useEffect} from 'react'
@@ -47,10 +48,11 @@ function App() {
         <Navbar user={user}/>
       </div>  
       <Routes>
-        <Route path='/' element={user ? <Home /> : <Login />} />
-        <Route path='/new-hit' element={user ? <Newhit /> : <Login />} />
+        <Route path='/' element={user ? <Home /> : <Register />} />
+        <Route path='/new-hit' element={user ? <Newhit /> : <Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/hits' element={user ? <Hits /> : <Login />} />
+        <Route path='/hits' element={user ? <Hits /> : <Register />} />
+        <Route path='/register' element={ <Register />} />
       </Routes>
       
       </Router>
