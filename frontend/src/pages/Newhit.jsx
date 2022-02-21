@@ -1,10 +1,13 @@
 import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+
 
 const Newhit = () => {
-  const [formData, updateFormData] = useState('');
+  const [formData, setFormData] = useState('');
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
-    updateFormData({
+    setFormData({
       ...formData,
 
       // Trimming any whitespace
@@ -15,11 +18,14 @@ const Newhit = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(formData);
-    // ... submit to API or something
+    
+
+  navigate('/hits')
   };
 
-  const handleReset = (e) => {
+  const handleReset = () => {
       // clear the form
+      
   }
 
   return (
@@ -55,7 +61,7 @@ const Newhit = () => {
        
           <div>
             <label>Did you Apply?</label>
-            <input type="checkbox" name="appliedYes" />
+            <input type="checkbox" name="appliedYes" onChange={handleChange}/>
 
           </div>
           <button

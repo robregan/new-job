@@ -1,7 +1,10 @@
+// import {useNavigate} from 'react-router-dom';
 const Hits = require("../models/Hit");
+// import {toast} from 'react-toastify'
 
 module.exports = {
 createHit: async (req, res) => {
+    // const navigate = useNavigate()
     try {
         console.log(req)
       await Hits.create({
@@ -13,7 +16,7 @@ createHit: async (req, res) => {
       });
 
       console.log("Post has been added!");
-      res.redirect("/profile");
+      navigate('/hits')
     } catch (err) {
       console.log(err);
       res.redirect("/");
