@@ -8,8 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 5000
 const connectDB = require("./config/db")
 require('dotenv').config()
+const hitsRoutes = require("./routes/hits")
 
-
+//Body Parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 app.use(
@@ -30,6 +33,8 @@ app.use(
 
 connectDB()
 app.use("/auth", authRoute);
+app.use("/new-hit", hitsRoutes);
+
 
 
 app.listen(PORT, () => {
