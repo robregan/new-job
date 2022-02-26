@@ -5,10 +5,12 @@ import { ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Newhit from './pages/Newhit'
+import Hitlist from './context/Hitlist'
 import Hits from './pages/Hits'
 import Login from './pages/Login'
 import useGetUser from './context/User'
+import Newhit from './pages/Newhit'
+import {HitsProvider} from './context/Hits'
 
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
   const user = useGetUser()
 console.log(user)
   return (
-    <>
+    <HitsProvider>
+
     <Router>
       <div className="container">
         <Navbar user={user}/>
@@ -31,7 +34,7 @@ console.log(user)
       
       </Router>
       <ToastContainer />
-    </>
+    </HitsProvider>
     
     
 

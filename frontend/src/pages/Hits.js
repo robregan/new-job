@@ -1,21 +1,17 @@
-import Newhit from './Newhit'
-import {useState} from 'react'
 
+import {useHits} from '../context/Hits'
 
 
 const Hits = () => {
-  
- const [formData, updateFormData] = useState([])
+ const hits = useHits()
 
+  console.log(hits)
 
-  const addHit = newHit => {
-   updateFormData(...formData, newHit)
- }
- 
-console.log(addHit)
   return (
+
+    
     <div className="container">
-   <p>  {formData.companyName} </p>
+   <p>  {hits} </p>
     </div>
   )
 }
