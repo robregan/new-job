@@ -32,7 +32,9 @@
 .zebra{
   cursor: pointer;
 }
-
+li{
+  list-style-type: none;
+}
 .avatar {
   width: 32px;
   height: 32px;
