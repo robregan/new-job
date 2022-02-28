@@ -9,7 +9,8 @@ export default function AddHit() {
     contactEmail: '',
     jobTitle: '',
     companySite: '',
-    appliedYes: false
+    appliedYes: false,
+
   });
 
   const dispatch = useHitsDispatch()
@@ -50,34 +51,34 @@ export default function AddHit() {
       <div>
         <label>
           Company Name:
-          <input type="text" name="companyName" placeholder="Company Name" onChange={handleChange}/>
+          <input type="text" name="companyName" key={1} placeholder="Company Name" onChange={handleChange}/>
         </label>
       
       </div>
       <div>
         <label htmlFor="email" >Contact Email: </label>
-        <input type="email" name="contactEmail" placeholder="Contact Email" onChange={handleChange}/>
+        <input type="email" name="contactEmail" key={2} placeholder="Contact Email" onChange={handleChange}/>
 
       </div>
 
       <div>
         <label>
           Job Title:
-          <input type="text" name="jobTitle" placeholder='Job Title' onChange={handleChange} />
+          <input type="text" name="jobTitle" key={3} placeholde='Job Title' onChange={handleChange} />
         </label>
       
       </div>
       <div>
         <label>
           Company Website:
-          <input type="text" name="companySite" placeholder="Company Site" onChange={handleChange}/>
+          <input type="text" name="companySite" key={4} placeholder="Company Site" onChange={handleChange}/>
         </label>
       
       </div>
 
       <div>
         <label>Did you Apply?</label>
-        <input type="checkbox" name="appliedYes" onChange={handleChange}/>
+        <input type="checkbox" name="appliedYes" key={5} onChange={handleChange}/>
 
       </div>
       <button
